@@ -15,6 +15,9 @@ a = list(map(int, input().split()))
 print("개수를 알고싶은 정수를 입력하세요.")
 n = int(input())
 
-print( "값이", n,"인 데이터 개수 =", count_by_range(a, n, n))
+if count_by_range(a, n, n) == 0:
+    print('값이 존재하지 않습니다.')
+else:
+    print("값이", n, "인 데이터 개수 =", count_by_range(a, n, n))
 
 print( "값이 [-1, 3] 범위에 있는 데이터 개수 =", count_by_range(a, -1, 3))
